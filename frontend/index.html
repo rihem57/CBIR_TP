@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CBIR Studio - Content-Based Image Retrieval"
+    >
+
+    <title>CBIR Studio — Image Retrieval</title>
+
+    <!-- Main stylesheet -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!-- Responsive stylesheet -->
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================================================
+         APPLICATION
+    ========================================================== -->
+
+    <div id="app">
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="navbar">
+
+            <div class="navbar-container">
+
+                <!-- Logo -->
+                <a href="#" class="brand">
+
+                    <div class="brand-mark">
+                        <span class="brand-dot"></span>
+                        <span class="brand-ring"></span>
+                    </div>
+
+                    <div class="brand-text">
+
+                        <span class="brand-name">
+                            CBIR
+                        </span>
+
+                        <span class="brand-subtitle">
+                            STUDIO
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- Navigation -->
+                <nav class="main-navigation">
+
+                    <a
+                        href="#search"
+                        class="nav-link active"
+                    >
+                        Recherche
+                    </a>
+
+                    <a
+                        href="#results"
+                        class="nav-link"
+                    >
+                        Résultats
+                    </a>
+
+                    <a
+                        href="#how-it-works"
+                        class="nav-link"
+                    >
+                        Fonctionnement
+                    </a>
+
+                </nav>
+
+
+                <!-- API status -->
+                <div class="api-status">
+
+                    <span class="status-indicator"></span>
+
+                    <span class="status-text">
+                        API Online
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             MAIN
+        ====================================================== -->
+
+        <main>
+
+
+            <!-- =================================================
+                 HERO
+            ================================================== -->
+
+            <section class="hero">
+
+                <div class="hero-container">
+
+                    <div class="hero-content">
+
+                        <div class="eyebrow">
+
+                            <span class="eyebrow-line"></span>
+
+                            <span>
+                                CONTENT-BASED IMAGE RETRIEVAL
+                            </span>
+
+                        </div>
+
+
+                        <h1 class="hero-title">
+
+                            Recherchez des images
+                            <span>par similarité visuelle.</span>
+
+                        </h1>
+
+
+                        <p class="hero-description">
+
+                            Sélectionnez une image de référence,
+                            choisissez un descripteur visuel et
+                            retrouvez les images les plus similaires
+                            dans votre base de données.
+
+                        </p>
+
+
+                        <!-- Descriptor badges -->
+                        <div class="descriptor-badges">
+
+                            <div class="descriptor-badge">
+
+                                <span class="descriptor-icon">
+                                    ◉
+                                </span>
+
+                                <span>
+                                    COLOR
+                                </span>
+
+                            </div>
+
+
+                            <div class="descriptor-badge">
+
+                                <span class="descriptor-icon">
+                                    ◈
+                                </span>
+
+                                <span>
+                                    LBP
+                                </span>
+
+                            </div>
+
+
+                            <div class="descriptor-badge">
+
+                                <span class="descriptor-icon">
+                                    ⬡
+                                </span>
+
+                                <span>
+                                    HOG
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hero visual -->
+                    <div class="hero-visual">
+
+                        <div class="visual-grid"></div>
+
+                        <div class="visual-orbit orbit-one"></div>
+
+                        <div class="visual-orbit orbit-two"></div>
+
+                        <div class="visual-core">
+
+                            <div class="core-inner"></div>
+
+                        </div>
+
+
+                        <div class="visual-label label-top">
+                            VISUAL
+                        </div>
+
+                        <div class="visual-label label-right">
+                            FEATURES
+                        </div>
+
+                        <div class="visual-label label-bottom">
+                            SEARCH
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SEARCH WORKSPACE
+            ================================================== -->
+
+            <section
+                id="search"
+                class="search-section"
+            >
+
+                <div class="section-container">
+
+
+                    <!-- Section heading -->
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span class="section-number">
+                                01
+                            </span>
+
+                            <div>
+
+                                <span class="section-kicker">
+                                    SEARCH WORKSPACE
+                                </span>
+
+                                <h2>
+                                    Configurez votre recherche
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <p>
+                            Définissez l'image de référence et
+                            les paramètres de comparaison.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Search cards -->
+                    <div class="search-workspace">
+
+
+                        <!-- =====================================
+                             QUERY IMAGE
+                        ====================================== -->
+
+                        <article class="card query-card">
+
+                            <div class="card-header">
+
+                                <div>
+
+                                    <span class="card-index">
+                                        01
+                                    </span>
+
+                                    <h3>
+                                        Image de référence
+                                    </h3>
+
+                                </div>
+
+                                <span class="card-label">
+                                    QUERY
+                                </span>
+
+                            </div>
+
+
+                            <!-- Image preview -->
+                            <div
+                                id="query-preview"
+                                class="query-preview"
+                            >
+
+                                <div class="preview-placeholder">
+
+                                    <div class="placeholder-icon">
+                                        +
+                                    </div>
+
+                                    <span>
+                                        Sélectionnez une image
+                                    </span>
+
+                                </div>
+
+                                <img
+                                    id="query-image"
+                                    class="query-image hidden"
+                                    src=""
+                                    alt="Image requête"
+                                >
+
+                            </div>
+
+
+                            <!-- Query information -->
+                            <div class="query-information">
+
+                                <div class="query-file">
+
+                                    <span class="info-label">
+                                        FICHIER
+                                    </span>
+
+                                    <span
+                                        id="query-filename"
+                                        class="info-value"
+                                    >
+                                        Aucune image sélectionnée
+                                    </span>
+
+                                </div>
+
+
+                                <div class="query-type">
+
+                                    <span class="info-label">
+                                        TYPE
+                                    </span>
+
+                                    <span class="info-value">
+                                        IMAGE
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =====================================
+                             SEARCH PARAMETERS
+                        ====================================== -->
+
+                        <article class="card parameters-card">
+
+                            <div class="card-header">
+
+                                <div>
+
+                                    <span class="card-index">
+                                        02
+                                    </span>
+
+                                    <h3>
+                                        Paramètres de recherche
+                                    </h3>
+
+                                </div>
+
+                                <span class="card-label">
+                                    CONFIG
+                                </span>
+
+                            </div>
+
+
+                            <div class="parameters-content">
+
+
+                                <!-- Image selector -->
+                                <div class="form-group">
+
+                                    <label
+                                        for="image-select"
+                                        class="form-label"
+                                    >
+                                        Image de référence
+                                    </label>
+
+                                    <div class="select-wrapper">
+
+                                        <select
+                                            id="image-select"
+                                            class="form-select"
+                                        >
+
+                                            <option value="">
+                                                Chargement des images...
+                                            </option>
+
+                                        </select>
+
+                                        <span class="select-arrow">
+                                            ↓
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Descriptor -->
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        Descripteur visuel
+                                    </label>
+
+
+                                    <div
+                                        id="descriptor-selector"
+                                        class="descriptor-selector"
+                                    >
+
+
+                                        <button
+                                            type="button"
+                                            class="descriptor-option active"
+                                            data-descriptor="color"
+                                        >
+
+                                            <span class="option-icon">
+                                                ◉
+                                            </span>
+
+                                            <span class="option-content">
+
+                                                <strong>
+                                                    Couleur
+                                                </strong>
+
+                                                <small>
+                                                    HSV Histogram
+                                                </small>
+
+                                            </span>
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            class="descriptor-option"
+                                            data-descriptor="lbp"
+                                        >
+
+                                            <span class="option-icon">
+                                                ◈
+                                            </span>
+
+                                            <span class="option-content">
+
+                                                <strong>
+                                                    LBP
+                                                </strong>
+
+                                                <small>
+                                                    Texture
+                                                </small>
+
+                                            </span>
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            class="descriptor-option"
+                                            data-descriptor="hog"
+                                        >
+
+                                            <span class="option-icon">
+                                                ⬡
+                                            </span>
+
+                                            <span class="option-content">
+
+                                                <strong>
+                                                    HOG
+                                                </strong>
+
+                                                <small>
+                                                    Forme / contours
+                                                </small>
+
+                                            </span>
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Top K -->
+                                <div class="form-group">
+
+                                    <div class="label-row">
+
+                                        <label
+                                            for="top-k"
+                                            class="form-label"
+                                        >
+                                            Nombre de résultats
+                                        </label>
+
+                                        <span
+                                            id="top-k-value"
+                                            class="value-indicator"
+                                        >
+                                            10
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="top-k-control">
+
+                                        <button
+                                            type="button"
+                                            id="top-k-minus"
+                                            class="stepper-button"
+                                            aria-label="Diminuer"
+                                        >
+                                            −
+                                        </button>
+
+                                        <div class="top-k-display">
+                                            <span id="top-k-display">
+                                                10
+                                            </span>
+
+                                            <small>
+                                                résultats
+                                            </small>
+                                        </div>
+
+                                        <button
+                                            type="button"
+                                            id="top-k-plus"
+                                            class="stepper-button"
+                                            aria-label="Augmenter"
+                                        >
+                                            +
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Distance -->
+                                <div class="search-info">
+
+                                    <div class="metric-item">
+
+                                        <span class="metric-icon">
+                                            ↔
+                                        </span>
+
+                                        <div>
+
+                                            <span class="metric-label">
+                                                DISTANCE
+                                            </span>
+
+                                            <strong>
+                                                L1 — Manhattan
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="metric-item">
+
+                                        <span class="metric-icon">
+                                            ≈
+                                        </span>
+
+                                        <div>
+
+                                            <span class="metric-label">
+                                                CLASSEMENT
+                                            </span>
+
+                                            <strong>
+                                                Distance croissante
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Search button -->
+                                <button
+                                    type="button"
+                                    id="search-button"
+                                    class="search-button"
+                                >
+
+                                    <span class="button-icon">
+                                        →
+                                    </span>
+
+                                    <span>
+                                        Lancer la recherche
+                                    </span>
+
+                                </button>
+
+
+                                <!-- Search status -->
+                                <div
+                                    id="search-status"
+                                    class="search-status"
+                                >
+
+                                    <span
+                                        id="status-dot"
+                                        class="status-dot"
+                                    ></span>
+
+                                    <span id="status-message">
+                                        Prêt pour une recherche
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESULTS
+            ================================================== -->
+
+            <section
+                id="results"
+                class="results-section"
+            >
+
+                <div class="section-container">
+
+
+                    <!-- Results header -->
+                    <div class="results-header">
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-number">
+                                    03
+                                </span>
+
+                                <div>
+
+                                    <span class="section-kicker">
+                                        RETRIEVAL RESULTS
+                                    </span>
+
+                                    <h2>
+                                        Images similaires
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+                            <p>
+                                Les images sont classées selon
+                                leur distance avec la requête.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Results statistics -->
+                        <div class="results-meta">
+
+                            <div class="result-stat">
+
+                                <span
+                                    id="results-count"
+                                    class="stat-value"
+                                >
+                                    0
+                                </span>
+
+                                <span class="stat-label">
+                                    résultats
+                                </span>
+
+                            </div>
+
+
+                            <div class="result-stat">
+
+                                <span
+                                    id="active-descriptor"
+                                    class="stat-value"
+                                >
+                                    —
+                                </span>
+
+                                <span class="stat-label">
+                                    descripteur
+                                </span>
+
+                            </div>
+
+
+                            <div class="result-stat">
+
+                                <span class="stat-value">
+                                    L1
+                                </span>
+
+                                <span class="stat-label">
+                                    distance
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Results grid -->
+                    <div
+                        id="results-grid"
+                        class="results-grid"
+                    >
+
+                        <!-- Empty state -->
+                        <div
+                            id="results-empty"
+                            class="results-empty"
+                        >
+
+                            <div class="empty-icon">
+                                ◌
+                            </div>
+
+                            <h3>
+                                Aucun résultat pour le moment
+                            </h3>
+
+                            <p>
+                                Sélectionnez une image et lancez
+                                une recherche pour afficher les
+                                images similaires.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 HOW IT WORKS
+            ================================================== -->
+
+            <section
+                id="how-it-works"
+                class="how-section"
+            >
+
+                <div class="section-container">
+
+
+                    <div class="section-heading centered">
+
+                        <div>
+
+                            <span class="section-number">
+                                04
+                            </span>
+
+                            <span class="section-kicker">
+                                PIPELINE
+                            </span>
+
+                            <h2>
+                                Comment fonctionne le CBIR ?
+                            </h2>
+
+                        </div>
+
+                        <p>
+                            Le moteur transforme les images en
+                            représentations numériques puis compare
+                            leurs caractéristiques visuelles.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Pipeline -->
+                    <div class="pipeline">
+
+
+                        <!-- Step 1 -->
+                        <article class="pipeline-step">
+
+                            <div class="pipeline-number">
+                                01
+                            </div>
+
+                            <div class="pipeline-icon">
+                                ◉
+                            </div>
+
+                            <span class="pipeline-kicker">
+                                DESCRIBE
+                            </span>
+
+                            <h3>
+                                Extraire
+                            </h3>
+
+                            <p>
+                                Un descripteur visuel représente
+                                les caractéristiques de l'image :
+                                couleur, texture ou forme.
+                            </p>
+
+                        </article>
+
+
+                        <div class="pipeline-arrow">
+                            →
+                        </div>
+
+
+                        <!-- Step 2 -->
+                        <article class="pipeline-step">
+
+                            <div class="pipeline-number">
+                                02
+                            </div>
+
+                            <div class="pipeline-icon">
+                                ↔
+                            </div>
+
+                            <span class="pipeline-kicker">
+                                COMPARE
+                            </span>
+
+                            <h3>
+                                Comparer
+                            </h3>
+
+                            <p>
+                                Une distance est calculée entre
+                                le descripteur de la requête et
+                                ceux de la base.
+                            </p>
+
+                        </article>
+
+
+                        <div class="pipeline-arrow">
+                            →
+                        </div>
+
+
+                        <!-- Step 3 -->
+                        <article class="pipeline-step">
+
+                            <div class="pipeline-number">
+                                03
+                            </div>
+
+                            <div class="pipeline-icon">
+                                ≈
+                            </div>
+
+                            <span class="pipeline-kicker">
+                                RANK
+                            </span>
+
+                            <h3>
+                                Classer
+                            </h3>
+
+                            <p>
+                                Les images sont triées par distance
+                                croissante afin de retourner les
+                                plus similaires.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="footer">
+
+            <div class="footer-container">
+
+                <div class="footer-brand">
+
+                    <strong>
+                        CBIR STUDIO
+                    </strong>
+
+                    <span>
+                        Content-Based Image Retrieval
+                    </span>
+
+                </div>
+
+
+                <div class="footer-info">
+
+                    <span>
+                        Computer Vision
+                    </span>
+
+                    <span class="footer-separator">
+                        /
+                    </span>
+
+                    <span>
+                        FastAPI
+                    </span>
+
+                    <span class="footer-separator">
+                        /
+                    </span>
+
+                    <span>
+                        Image Similarity
+                    </span>
+
+                </div>
+
+
+                <div class="footer-status">
+
+                    <span class="status-indicator"></span>
+
+                    <span>
+                        System Ready
+                    </span>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
